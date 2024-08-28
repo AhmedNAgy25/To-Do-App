@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(122, 28, 172, 1) 0%,
+    rgba(122, 28, 172, 1) 35%,
+    rgb(203, 155, 229) 100%
+  );
+}
+.container {
+  margin: 50px auto;
+  padding: 20px;
+  width: fit-content;
+  border: 5px double rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: rgb(76, 12, 110);
+}
+
+.addingContainer {
+  padding: 8px;
+  border: rgb(255, 255, 255) 1px solid;
+  border-radius: 7px;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+  height: 30px;
+  font-weight: bold;
+  padding: 5px;
+  background-color: white;
+}
+input {
+  border-radius: 3px 0px 0px 3px;
+}
+button {
+  border-radius: 0px 3px 3px 0px;
+  color: black;
+  animation :background-color 0.6s, color 0.6s
+}
+button:hover{
+    background-color: rgba(122, 28, 172, 1);
+    color: white;
+    transition: background-color 0.6s, color 0.6s;
+}
+
+.tasksList {
+  padding: 10px;
+  border: rgb(255, 255, 255) 1px solid;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.note{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px #eee solid;
+}
