@@ -72,7 +72,7 @@ function resetInputs(inputTask, errorMsg) {
 // main function
 addTask_btn.onclick = function () {
   let inputTask = document.querySelector("#input");
-  if (inputTask.value !== "") {
+  if (inputTask.value) {
     addTaskToLoscal(inputTask.value);
     renderTask(inputTask.value);
     resetInputs(inputTask, errorMsg);
