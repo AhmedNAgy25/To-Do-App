@@ -69,7 +69,7 @@ function resetInputs(inputTask, errorMsg) {
   errorMsg.innerHTML = "";
 }
 
-// main function
+// main app function
 addTask_btn.onclick = function () {
   let inputTask = document.querySelector("#input");
   if (inputTask.value) {
