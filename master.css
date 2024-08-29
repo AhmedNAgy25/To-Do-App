@@ -1,3 +1,11 @@
+/* global values */
+:root {
+  /* colors */
+  --main-color: rgb(82, 13, 119);
+  --second-color: rgb(119, 22, 172);
+  --third-color: rgb(203, 155, 229);
+  --dango-color:white;  
+}
 * {
   margin: 0;
   padding: 0;
@@ -7,26 +15,28 @@ body {
   height: 100vh;
   background: linear-gradient(
     0deg,
-    rgba(122, 28, 172, 1) 0%,
-    rgba(122, 28, 172, 1) 35%,
-    rgb(203, 155, 229) 100%
+    var(--main-color) 0%,
+    var(--second-color) 35%,
+    var(--third-color) 100%
   );
 }
+
+/* container */
 .container {
   margin: 50px auto;
   padding: 20px;
   width: fit-content;
-  border: 5px double rgb(255, 255, 255);
+  border: 5px double var(--third-color);
   border-radius: 10px;
-  background-color: rgb(76, 12, 110);
+  background-color: var(--main-color);
 }
 
+/* inputs */
 .addingContainer {
   padding: 8px;
-  border: rgb(255, 255, 255) 1px solid;
+  border: var(--third-color) 1px solid;
   border-radius: 7px;
 }
-
 input,
 button {
   outline: none;
@@ -34,7 +44,7 @@ button {
   height: 30px;
   font-weight: bold;
   padding: 5px;
-  background-color: white;
+  background-color: var(--dango-color);
 }
 input {
   border-radius: 3px 0px 0px 3px;
@@ -43,18 +53,21 @@ button {
   border-radius: 0px 3px 3px 0px;
   color: black;
   animation: background-color 0.6s, color 0.6s;
+  border: var(--dango-color) 1px solid;
 }
 button:hover {
   background-color: rgba(122, 28, 172, 1);
-  color: white;
+  border: var(--third-color) 1px solid;
+  color: var(--dango-color);
   transition: background-color 0.6s, color 0.6s;
 }
 
+/* tasks area */
 .tasksList {
   padding: 10px;
   border-radius: 5px;
   margin-top: 10px;
-  color: white;
+  color: var(--dango-color);
   display: flex;
   flex-direction: column;
 }
@@ -69,10 +82,10 @@ button:hover {
   border-radius: 0;
   background-color: rgb(207, 28, 28);
   color: whitesmoke;
-  border: white .5px solid;
+  border: var(--dango-color) 0.5px solid;
 }
-.note button:hover{
-    background-color: #ff0000;
+.note button:hover {
+  background-color: #ff0000;
 }
 .note:not(:last-child) {
   border-bottom: #eeeeeea6 1px solid;

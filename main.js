@@ -1,5 +1,8 @@
+// Local Storage = LS
+
 let addTask = document.querySelector("button");
 
+// load from LS
 addEventListener("DOMContentLoaded", () => {
   for (let i = 0; i < localStorage.length; i++) {
     let key = localStorage.key(i);
@@ -9,11 +12,13 @@ addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// store in LS
 function addingToLoscal(tOAdd) {
   let uniqueKey = `${tOAdd}&${Date.now()}`;
   window.localStorage.setItem(uniqueKey, tOAdd);
 }
 
+// remove from LS
 function removeFromLocal(toRemove) {
   for (let i = 0; i < localStorage.length; i++) {
     let key = localStorage.key(i);
@@ -24,6 +29,7 @@ function removeFromLocal(toRemove) {
   }
 }
 
+// render in page
 function render(tOAdd) {
   let tasksList = document.getElementById("tasksList");
 
@@ -36,6 +42,7 @@ function render(tOAdd) {
     note.classList.add("note")
 
   del.innerHTML = "delete";
+  // delete button 
   del.onclick = function () {
     tasksList.removeChild(note);
     removeFromLocal(tOAdd);
@@ -44,6 +51,7 @@ function render(tOAdd) {
   tasksList.append(note);
 }
 
+// main function
 addTask.onclick = function () {
   let error = document.querySelector(".error");
   let inputTask = document.querySelector("#input");
